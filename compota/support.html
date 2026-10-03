@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>連携解除・データ削除・お問い合わせ | COMPOTA</title>
+  <meta name="description" content="COMPOTAのGoogle連携解除、端末内データ、カレンダーの予定、Discordメッセージの削除手順とお問い合わせ先をご案内します。">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="site-header"><div class="header-inner"><a class="brand" href="index.html">COMPOTA</a><nav aria-label="メインナビゲーション"><a href="index.html">ホーム</a><a href="privacy-policy.html">プライバシー</a><a href="terms.html">利用規約</a><a href="support.html" aria-current="page">削除・お問い合わせ</a></nav></div></header>
+  <main id="main">
+    <p class="eyebrow">SUPPORT &amp; DATA DELETION</p><h1>連携解除・データ削除・お問い合わせ</h1><p class="meta">最終更新日：2026年10月3日</p>
+    <article class="document">
+      <h2 id="delete-data">1. Google連携を解除する</h2>
+      <ol><li>COMPOTAを実行している端末でBotを停止します。常時起動サービスを設定している場合は、そのサービスも停止します。</li><li><a href="https://myaccount.google.com/connections">Googleアカウントのサードパーティ接続管理</a> を開き、連携に使ったGoogleアカウントでログインします。</li><li>COMPOTA、または認証時に表示されたアプリ名の接続を選び、アクセス権や接続を削除します。画面上の名称はGoogleの表示に従ってください。</li></ol>
+      <p>以降、再認証するまでGoogleカレンダーの操作はできなくなります。Google側の詳細な案内は <a href="https://support.google.com/accounts/answer/13533235?hl=ja">サードパーティ接続の管理方法</a> をご覧ください。</p>
+      <div class="note"><p>アクセス許可を取り消しても、作成済みの予定、Discordメッセージ、端末内のデータは残ります。削除したい情報に応じて、次の手順も実施してください。</p></div>
+      <h2>2. 実行端末の保存データを削除する</h2>
+      <p>端末の管理者が、Botを停止した状態で以下のファイルを削除してください。設定で保存場所を変更した場合は、変更後の場所が対象です。</p>
+      <ul><li><code>secrets/google_token.json</code>：Googleの認証情報。</li><li><code>data/compota.db</code>：予定のローカル記録、会話状態、処理済みメッセージの返信。</li><li><code>data/compota.db-wal</code>、<code>data/compota.db-shm</code>：存在する場合のSQLite関連ファイル。</li><li>他の端末、バックアップ、移行用コピーに保存した上記の情報。</li><li>保存した運用ログ：ログの保存先や保持期間は実行環境の設定に従います。</li></ul>
+      <p>利用を完全に終了する場合は、不要になった <code>.env</code>、<code>secrets/google_oauth_client.json</code> 等の設定・秘密情報も削除してください。Discord Botの認証情報が漏れた可能性がある場合は、Discord Developer Portalでトークンを再発行してください。</p>
+      <p>データベースを削除すると、直近の操作対象、再試行、復元、既存の操作ボタンの管理情報が失われます。予定をBotで整理したい場合は、連携解除・ローカルデータ削除の前に行ってください。Googleカレンダーの予定自体はデータベース削除では消えません。</p>
+      <h2>3. Googleカレンダーの予定を削除する</h2>
+      <p>Googleカレンダーで、COMPOTAが作成した不要な予定を確認して削除してください。利用を続ける場合はBotの削除機能も使用できますが、Botで予定を削除してもローカル記録は残る場合があります。本アプリ以外で作成した予定を誤って削除しないよう、対象を確認してください。</p>
+      <h2>4. Discordのメッセージを削除する</h2>
+      <p>Discordで、自分が送信した予定の指示や、権限のあるBotの返信を削除してください。自分で削除できない投稿はサーバー・チャンネル管理者へ依頼してください。Google連携の解除や端末内データの削除では、Discord上の投稿は消えません。</p>
+      <h2>5. 第三者に運用を依頼している場合</h2>
+      <p>Botの実行端末を自分で管理していない場合は、その運用担当者へ端末内データ・認証情報・バックアップの削除を依頼してください。開発者は、管理していない端末のデータを直接削除できません。</p>
+      <h2 id="contact">6. お問い合わせ</h2>
+      <p>開発・本サイト管理：<a href="https://github.com/Mizuki-y0430">Mizuki-y0430</a></p>
+      <p>機能の質問、不具合報告、プライバシーポリシーや情報の取り扱いの相談は、<a href="https://github.com/Mizuki-y0430/calendar-bot/issues">calendar-bot のGitHub Issues</a> からご連絡ください。投稿にはGitHubアカウントが必要です。使用バージョン、実行環境、個人情報を含まない再現手順があると確認しやすくなります。</p>
+      <div class="note"><p>GitHub Issuesは公開されます。予定の具体的な内容、メールアドレス、DiscordのID、認証トークン、OAuth JSON、データベース、個人情報を含むログを投稿しないでください。個別データの確認が必要な相談は、まず内容を伏せて対応方法をお問い合わせください。</p></div>
+      <p>返信の時期や対応の完了を保証するものではありません。第三者の実行端末にある個別データについては、端末の運用担当者への連絡も必要です。</p>
+    </article>
+  </main>
+  <footer class="site-footer"><div class="footer-links"><a href="index.html">ホーム</a><a href="privacy-policy.html">プライバシーポリシー</a><a href="terms.html">利用規約</a></div><p>© 2026 Mizuki-y0430 · COMPOTA</p></footer>
+</body>
+</html>
