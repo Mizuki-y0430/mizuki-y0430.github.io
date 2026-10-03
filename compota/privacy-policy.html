@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>プライバシーポリシー | COMPOTA</title>
+  <meta name="description" content="COMPOTAが扱うDiscord・Googleカレンダーの情報、利用目的、端末内の保存、外部サービスへの送信、連携解除・削除について説明します。">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="site-header"><div class="header-inner"><a class="brand" href="index.html">COMPOTA</a><nav aria-label="メインナビゲーション"><a href="index.html">ホーム</a><a href="privacy-policy.html" aria-current="page">プライバシー</a><a href="terms.html">利用規約</a><a href="support.html">削除・お問い合わせ</a></nav></div></header>
+  <main id="main">
+    <p class="eyebrow">PRIVACY POLICY</p>
+    <h1>プライバシーポリシー</h1>
+    <p class="meta">制定・最終更新日：2026年10月3日 ／ 対象：COMPOTA v0 および本サイト</p>
+    <article class="document">
+      <h2>1. 適用範囲と管理者</h2>
+      <p>Mizuki-y0430（以下「開発者」）は、DiscordとGoogleカレンダーを連携するCOMPOTA（以下「本アプリ」）および本サイトにおける情報の取り扱いを、以下のとおり定めます。</p>
+      <p>本アプリは利用者または運用担当者の端末で動作します。端末内のデータはその端末の管理者が管理します。開発者がソフトウェアを公開していることだけを理由に、各利用者の端末内データが開発者へ送られることはありません。第三者に運用を依頼する場合は、その運用担当者の管理方法も確認してください。</p>
+      <h2>2. アクセス・取得・保存する情報</h2>
+      <div class="table-wrap"><table>
+        <caption>情報の種類と取り扱い</caption>
+        <thead><tr><th scope="col">情報</th><th scope="col">取り扱い・目的</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Discordの情報</th><td>専用チャンネルに送信されたメッセージ本文、ユーザーID、チャンネルID、メッセージIDを、指示の解析・対象確認・返信・二重登録防止に使用します。ID、解析された予定情報、会話状態、Botの返信内容などを端末内に保存します。</td></tr>
+          <tr><th scope="row">予定の情報</th><td>予定名、開始・終了日時、終日の日付、カテゴリ、場所、説明、色、通知設定、カレンダーID、イベントID、処理状態・作成更新削除日時を、登録・変更・削除・復元・再試行に使用します。対応する記録を端末内のデータベースに保存します。</td></tr>
+          <tr><th scope="row">Google APIから受け取る情報</th><td>予定の操作結果や存在確認のためのイベント情報、接続確認時の予定情報にアクセスします。取得した応答を操作結果の確認に使用します。カレンダー全体を定期的に収集する機能はありません。</td></tr>
+          <tr><th scope="row">認証情報</th><td>Google OAuthのアクセストークン・更新トークンと関連する認証情報を、許可されたカレンダー操作と認証更新のために実行端末に保存します。Discord Botトークン等の設定も実行端末で管理します。Googleアカウントのパスワードを本アプリが取得・保存することはありません。</td></tr>
+          <tr><th scope="row">会話状態とログ</th><td>未完了の操作、候補イベント、直近の操作対象、処理済みメッセージへの返信を保存します。障害調査のため、エラー内容、イベントの識別子、接続状況等が実行端末のログに記録される場合があります。</td></tr>
+        </tbody>
+      </table></div>
+      <p>Discordとの接続上、設定対象外のメッセージイベントを受信する場合がありますが、本アプリの処理では送信者とチャンネルを確認し、設定された対象以外の指示を予定操作に使用しません。</p>
+      <h2>3. 利用目的</h2>
+      <ul><li>利用者の指示に基づく予定の作成、確認、変更、削除、復元。</li><li>日時や予定名の不足確認、候補の提示、結果の返信。</li><li>二重登録防止、処理の再試行、操作対象の管理。</li><li>Google連携の認証維持、接続確認、不具合やセキュリティ上の問題への対応。</li></ul>
+      <p>個人情報や予定データを販売したり、広告配信、行動分析、信用評価のために利用したりしません。日本語の解析は端末内で行い、外部の生成AI APIへ送信しません。Googleから取得した情報を含む利用者データを、AI・機械学習モデルの開発、学習、改善に使用しません。</p>
+      <h2>4. Googleカレンダーへのアクセス権限</h2>
+      <p>本アプリは <code>https://www.googleapis.com/auth/calendar.events</code> の権限を要求します。この権限は、Googleアカウントでアクセス可能なカレンダーの予定の表示・編集を許可するものです。本アプリでは、設定したカレンダーへの予定の追加・変更・削除と操作結果・接続の確認に使用します。Gmail、Google Drive、連絡先を扱うための権限は要求しません。</p>
+      <p>本アプリによるGoogle APIから受け取った情報の利用および他のアプリへの転送は、Limited Use（制限付き利用）の要件を含む <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a> および <a href="https://developers.google.com/workspace/workspace-api-user-data-developer-policy">Google Workspace APIのユーザーデータとデベロッパーポリシー</a> に従います。</p>
+      <h2>5. 外部サービスへの送信・共有</h2>
+      <ul>
+        <li><strong>Google：</strong>Google Calendar APIに、操作対象のカレンダーID・イベントID、予定名、日時、場所・説明（入力された場合）、色・通知設定、認証に必要な情報を送信します。</li>
+        <li><strong>Discord：</strong>専用チャンネルに処理結果、予定のタイトル・カテゴリ・日時、確認質問、操作ボタン等を送信します。メッセージや返信はDiscord側にも保存されます。</li>
+        <li><strong>お問い合わせ：</strong>利用者がGitHub Issues等へ投稿した内容は、そのサービスへ送信されます。公開投稿は第三者も閲覧できます。</li>
+      </ul>
+      <p>チャンネルやカレンダーの共有設定により、他のメンバーや共有先が予定を閲覧できる場合があります。外部サービスの取り扱いは、それぞれの <a href="https://policies.google.com/privacy?hl=ja">Googleプライバシーポリシー</a>、<a href="https://discord.com/privacy">Discordプライバシーポリシー</a>、<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHubプライバシーステートメント</a> に従います。</p>
+      <p>上記の機能提供に必要な送信以外の第三者提供は行いません。ただし、利用者が特定のデータについて明示的に同意したサポート対応、セキュリティ上の調査、法令上必要な対応を、適用される法令およびGoogleのポリシーで認められる範囲で行う場合があります。開発者が利用者の予定等を閲覧するのは、利用者が具体的に同意した対応、セキュリティ上必要な調査、または法令上必要な場合に限ります。</p>
+      <h2>6. 保存場所・保存期間・安全管理</h2>
+      <p>標準設定では、予定・会話状態・返信の記録は実行端末の <code>data/compota.db</code>、Google認証情報は <code>secrets/google_token.json</code> に保存します。保存場所は運用設定により変更できます。</p>
+      <p>v0には保存済み記録を一定期間で自動消去する機能はありません。会話の操作対象の有効期限や復元可能時間が過ぎても、保存済みデータが自動的に完全削除されるわけではありません。Googleカレンダーで削除した予定のローカル記録も、復元や状態管理のために残る場合があります。端末の管理者は、利用目的に必要な間だけ保管し、利用終了時や不要になった時点で削除してください。</p>
+      <p>Google・Discordとの通信にはHTTPS等の暗号化された通信を使用します。v0の認証JSONファイルおよびSQLiteデータベースにはアプリ独自の保存時暗号化を実装していません。端末の管理者は、OSのディスク暗号化、ファイルのアクセス制限、端末の更新、秘密情報を公開リポジトリへ含めない管理を行ってください。バックアップや転送先も同様に保護し、不要になったコピーを削除してください。</p>
+      <h2>7. 連携解除・情報の削除</h2>
+      <p>利用者は <a href="https://myaccount.google.com/connections">Googleアカウントのサードパーティ接続管理</a> から、本アプリのアクセス許可を取り消せます。取り消した後は再認証までGoogleカレンダーの連携機能を利用できません。</p>
+      <p>許可の取り消しだけでは、端末内のデータ、作成済みのGoogleカレンダーの予定、Discordのメッセージは削除されません。それぞれ別途削除が必要です。具体的な手順は <a href="support.html#delete-data">連携解除・データ削除</a> をご覧ください。</p>
+      <p>情報の確認、訂正、削除、利用停止に関する相談は <a href="support.html#contact">お問い合わせ窓口</a> で受け付けます。開発者が管理していない実行端末の情報については、その端末の運用担当者へ依頼してください。</p>
+      <h2>8. 本サイトの閲覧情報</h2>
+      <p>本サイトには独自のアクセス解析、広告、トラッキング用Cookie、入力フォームを設置していません。GitHub Pagesで公開した場合、ホスティング事業者のGitHubがセキュリティ目的で閲覧者のIPアドレスを記録・保存します。詳細は <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection">GitHub Pagesのデータ収集の説明</a> をご覧ください。</p>
+      <h2>9. ポリシーの変更</h2>
+      <p>機能や情報の取り扱いの変更に応じて本ポリシーを更新し、更新日と内容を本ページに掲載します。Googleユーザーデータの利用目的やアクセスする情報を変更する場合は、変更後の利用を開始する前に利用者へ知らせ、必要な同意を取得します。</p>
+      <h2>10. お問い合わせ</h2>
+      <p>開発・本サイト管理：Mizuki-y0430<br>窓口：<a href="support.html#contact">お問い合わせ方法</a></p>
+    </article>
+  </main>
+  <footer class="site-footer"><div class="footer-links"><a href="index.html">ホーム</a><a href="terms.html">利用規約</a><a href="support.html">削除・お問い合わせ</a></div><p>© 2026 Mizuki-y0430 · COMPOTA</p></footer>
+</body>
+</html>
